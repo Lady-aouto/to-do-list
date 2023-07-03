@@ -11,7 +11,7 @@
 ### The focus will be on the Entry Bar which makes the adding operation easier:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/a94b8abd-e9db-4d9f-acb9-774b0df85132)
 
-### After adding a task, the user can use scrollbars to move (up/down) if the list contains more than 6 tasks (right/left) if the task is long like task number 2:
+### After adding a task, the user can use scrollbars to move (up/down) if the list contains more than 6 tasks, and (right/left) if the task is long like task number 2:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/f98bfc32-214c-40cb-a31f-ba33f2e88c74)
 
 ### When the user completes a task, he can cross it by selecting the task and pressing the ‘Cross-Off Task’ button:
@@ -20,22 +20,22 @@
 ### If the user wants to uncross a task, he can do this by selecting the task and pressing the ‘Uncross Task’ button: here task 6 is crossed, which is obvious because the select-background is different from uncrossed tasks.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/f38775ec-84a7-463a-9d06-c6d3311eaa22)
 
-### After pressing ‘Uncross Task’ task 6 will be uncrossed:
+#### After pressing ‘Uncross Task’ task 6 will be uncrossed:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/9464d6a5-2d53-4f6e-9d61-72ce3961d45c)
 
 ### The user can also delete all the crossed tasks by pressing the ‘Delete Crossed’ button: here tasks 4 and 7 are crossed
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/3f882cf1-beb9-42a3-8bf2-eb929290b428)
 
-### After pressing the ‘Delete-Crossed’ button tasks 4 and 7 will be deleted:
+#### After pressing the ‘Delete-Crossed’ button tasks 4 and 7 will be deleted:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/4549e633-72f7-4c7a-8653-0a79ab8788d1)
 
 ### The user can also delete a task even if it is not crossed by selecting the task and pressing the ‘Delete Task’ button: here task 3 is selected:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/7282c160-a66c-48e7-b224-c42292e0f2a3)
 
-### Task 3 will be deleted after pressing the ‘Delete Task’ button:
+#### Task 3 will be deleted after pressing the ‘Delete Task’ button:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/a650cb82-5c51-41e0-a850-609d3267c0f2)
 
-## In the file menu we have three choices: 
+## In the file menu there is three choices: 
 ### The first choice is ‘Save List’, which allows the user to save his tasks in a .dat file.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/fa4aca56-0566-448a-bbb5-e1bd4d495745)
 
@@ -66,25 +66,25 @@ And the list will become empty as the first time.
 ## If the user presses ‘No’ the application will keep running, but if he presses ‘Yes’, the crossed tasks will be deleted, the application will be closed, and a close screen will be shown to the user.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/f4275361-59d8-4c21-8a60-68f9db6976c6)
 
-## The user will be able to open and close the application without losing his tasks because we used SQLite3 as a database to save the data locally. We have a todo.db file that contains a table called tasks which contains one attribute named title type ‘text ’:
+## The user will be able to open and close the application without losing his tasks because I used SQLite3 as a database to save the data locally. I have a todo.db file that contains a table called tasks which contains one attribute named title type ‘text ’:
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/d941584b-dec5-4cc3-8eef-a930f12c23a5)
 
-### We used some operations to interact with the database, such as
+### I used some operations to interact with the database, such as
 1.	for row in cur.execute('select title from tasks'):
 2.	cur.execute('insert into tasks values (?)', (my_entry.get(),))
 3.	cur.execute('delete from tasks where title = ?', (val,))
 4.	cur.execute('delete from tasks')
 5.	conn.commit()
 
-### In the application, we added tones to the buttons to make our application more attractive, these tones are separated in the Sounds.py file that we have imported into our main ToDoList.py file and created an object of the Sound class to use these tones.
+### In the application, I added tones to the buttons to make the application more attractive, these tones are separated in the Sounds.py file that I have imported into our main ToDoList.py file and created an object of the Sound class to use these tones.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/26240308-e571-4f7f-8fee-2c1de30ce0e9)
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/c30da888-f583-4706-9c91-3e9f3c9a2ba6)
 
-### We also attached some keyboard buttons (enter/delete) to function in place of (Add Task/Delete Task) respectively using these lines:
+### I also attached some keyboard buttons (enter/delete) to function in place of (Add Task/Delete Task) respectively using these lines:
 root.bind('<Return>', lambda event=None: add_button.invoke())
 root.bind('<Delete>', lambda event=None: delete_button.invoke())
 
-### We were able to show our icon in the taskbar using these two lines:
+### I was able to show the icon in the taskbar using these two lines:
 putIcon = u'CompanyName.ProductName'
 ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(putIcon)
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/39272fd2-8206-4fbe-9bc0-33bb5b2f3956)
@@ -103,4 +103,4 @@ def on_leave(e):
 delete_button.bind("<Enter>", on_enter)
 delete_button.bind("<Leave>", on_leave)
 
-## Click here to watch a video demo of our application.
+##### Click here to watch a video demo of our application.
