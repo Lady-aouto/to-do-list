@@ -70,37 +70,37 @@ And the list will become empty as the first time.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/d941584b-dec5-4cc3-8eef-a930f12c23a5)
 
 ### I used some operations to interact with the database, such as
-1.	for row in cur.execute('select title from tasks'):
-2.	cur.execute('insert into tasks values (?)', (my_entry.get(),))
-3.	cur.execute('delete from tasks where title = ?', (val,))
-4.	cur.execute('delete from tasks')
-5.	conn.commit()
+>1.	for row in cur.execute('select title from tasks'):
+>2.	cur.execute('insert into tasks values (?)', (my_entry.get(),))
+>3.	cur.execute('delete from tasks where title = ?', (val,))
+>4.	cur.execute('delete from tasks')
+>5.	conn.commit()
 
 ### In the application, I added tones to the buttons to make the application more attractive, these tones are separated in the Sounds.py file that I have imported into our main ToDoList.py file and created an object of the Sound class to use these tones.
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/26240308-e571-4f7f-8fee-2c1de30ce0e9)
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/c30da888-f583-4706-9c91-3e9f3c9a2ba6)
 
 ### I also attached some keyboard buttons (enter/delete) to function in place of (Add Task/Delete Task) respectively using these lines:
-root.bind('<Return>', lambda event=None: add_button.invoke())
-root.bind('<Delete>', lambda event=None: delete_button.invoke())
+>root.bind('<Return>', lambda event=None: add_button.invoke())
+>root.bind('<Delete>', lambda event=None: delete_button.invoke())
 
 ### I was able to show the icon in the taskbar using these two lines:
-putIcon = u'CompanyName.ProductName'
-ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(putIcon)
+>putIcon = u'CompanyName.ProductName'
+>ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(putIcon)
 ![image](https://github.com/Lady-aouto/to-do-list/assets/95139153/39272fd2-8206-4fbe-9bc0-33bb5b2f3956)
 
 ### Also, I was able to change the color of the buttons when you hover over them by creating two methods:
-def on_enter(e):
-    e.widget['background'] = '#ff4d94'
-    e.widget['foreground'] = 'white'
-
-
-def on_leave(e):
-    e.widget['background'] = '#ffb3d1'
-    e.widget['foreground'] = '#400080'
+>def on_enter(e):
+>    e.widget['background'] = '#ff4d94'
+>    e.widget['foreground'] = 'white'
+>
+>
+>def on_leave(e):
+>    e.widget['background'] = '#ffb3d1'
+>    e.widget['foreground'] = '#400080'
 
 ### And binding the buttons with these methods using the following lines for each button:
-delete_button.bind("<Enter>", on_enter)
-delete_button.bind("<Leave>", on_leave)
+>delete_button.bind("<Enter>", on_enter)
+>delete_button.bind("<Leave>", on_leave)
 
 ##### Click [here](https://drive.google.com/file/d/1xbbJxgh5VV-q5iLqqPz0wgwv6L55FqU7/view) to watch a video demo of our application.
