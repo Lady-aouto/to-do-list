@@ -103,4 +103,4 @@ def on_leave(e):
 delete_button.bind("<Enter>", on_enter)
 delete_button.bind("<Leave>", on_leave)
 
-##### Click ![here](https://drive.google.com/file/d/1xbbJxgh5VV-q5iLqqPz0wgwv6L55FqU7/view) to watch a video demo of our application.
+##### Click [here](https://drive.google.com/file/d/1xbbJxgh5VV-q5iLqqPz0wgwv6L55FqU7/view) to watch a video demo of our application.
